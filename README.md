@@ -3,25 +3,25 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 This project implements **Part IV** of the NYU Database Systems course project.
 
 The goal is to:
-1️⃣ Load unstructured health-related documents from PostgreSQL  
-2️⃣ Run a pretrained **DistilBERT disease classification model**  
-3️⃣ Predict patient risk and disease category  
-4️⃣ Store AI inference results back into PostgreSQL  
+1.Load unstructured health-related documents from PostgreSQL  
+2.Run a pretrained **DistilBERT disease classification model**  
+3.Predict patient risk and disease category  
+4.Store AI inference results back into PostgreSQL  
 
 This demonstrates how **Machine Learning integrates with database systems** in a real architecture.
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 PostgreSQL (unstructured_document) → Python Pipeline → DistilBERT Model → PostgreSQL (document_inference)
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```
 ds_part4
  ├─ app/
@@ -36,7 +36,7 @@ ds_part4
  └─ .env (ignored)
 ```
 
-## 🗄️ Database Tables
+## Database Tables
 
 ### unstructured_document
 doc_id (SERIAL PK)  
@@ -54,7 +54,7 @@ predicted_at
 
 ---
 
-## ⚙️ Environment Configuration
+## Environment Configuration
 Create `.env` in project root:
 
 PG_HOST=localhost  
@@ -68,12 +68,12 @@ MODEL_VERSION=distilbert_v1
 
 ---
 
-## 📦 Installation
+## Installation
 pip install -r requirements.txt
 
 ---
 
-## ▶️ Run Pipeline
+## Run Pipeline
 python main.py
 
 Expected output:
@@ -82,12 +82,12 @@ Pipeline completed.
 
 ---
 
-## 🧪 Verify Results in PostgreSQL
+## Verify Results in PostgreSQL
 SELECT * FROM document_inference;
 
 ---
 
-## 🤖 Model Notes
+## Model Notes
 Model is a **fine-tuned DistilBERT classifier**
 Predicts:
 Diabetes  
@@ -99,7 +99,7 @@ They remain stored locally and are referenced via MODEL_PATH
 
 ---
 
-## 👥 Team
+## Team
 NYU DS Project – Part IV  
 Authors:
 - Xiaoke Huang
