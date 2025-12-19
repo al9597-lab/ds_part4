@@ -22,6 +22,7 @@ PostgreSQL (unstructured_document) → Python Pipeline → DistilBERT Model → 
 ---
 
 ## 📂 Project Structure
+```
 ds_part4
  ├─ app/
  │   ├─ config.py              # Loads environment variables
@@ -33,8 +34,7 @@ ds_part4
  ├─ main.py
  ├─ requirements.txt
  └─ .env (ignored)
-
----
+```
 
 ## 🗄️ Database Tables
 
